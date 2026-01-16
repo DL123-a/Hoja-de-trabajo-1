@@ -1,7 +1,11 @@
+import java.util.EmptyStackException;
+
 public class RadioReal implements Radio {
-    int contAm = 530;
+
+    double contAm = 530;
     double contFm = 87.9;
     Boolean frecuencia = false;
+    double[] estaciones = new double[12];
 
     public void prenderRadio(){
         System.out.println("Radio encendida");
@@ -16,16 +20,25 @@ public class RadioReal implements Radio {
             }else{
                 contAm+=10;
             }
+            System.out.println(contAm+" AM");
         }else{
             if(contFm==107.9){
                 contFm=81.9;
             }else{
                 contFm+=0.2;
             }
+            System.out.println(contAm+" FM");
         }
     }
 	public void guardarEstacion(int numeroBoton){
+        if(frecuencia){
+            estaciones[numeroBoton]=contAm;
+            System.out.println("Estación "+contAm+" AM guardada en botón "+numeroBoton);
+        }else{
+            estaciones[numeroBoton]=contFm;
+            System.out.println("Estación "+contFm+" FM guardada en botón "+numeroBoton);
 
+        }
     }
 	public void cargarEstacion(int numeroBoton){
 
