@@ -34,10 +34,10 @@ public class RadioReal implements Radio {
     public void guardarEstacion(int numeroBoton){
         if (frecuencia) {
             estaciones[numeroBoton] = contAm;
-            System.out.println((int) contAm + " AM guardada en botón " + numeroBoton);
+            System.out.println((int) contAm + " AM guardada en boton " + numeroBoton);
         } else {
             estaciones[numeroBoton] = contFm;
-            System.out.printf("%.1f FM guardada en botón %d%n", contFm, numeroBoton);
+            System.out.printf("%.1f FM guardada en boton %d%n", contFm, numeroBoton);
         }
     }
 
