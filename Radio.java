@@ -1,9 +1,9 @@
 public interface Radio{
-    void prenderRadio();
-	void apagarRadio();
-	void avanzarEstacion();
-	void guardarEstacion(int numeroBoton);
-	void cargarEstacion(int numeroBoton);
-	void cambiarFM();
-	void cambiarAM();
+    public void prenderRadio();
+	public void apagarRadio();
+	public void avanzarEstacion();
+	public void guardarEstacion(int numeroBoton);
+	public void cargarEstacion(int numeroBoton);
+	public void cambiarFM();
+	public void cambiarAM();
 }
