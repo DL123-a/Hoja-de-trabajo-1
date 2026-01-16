@@ -27,7 +27,7 @@ public class RadioReal implements Radio {
             }else{
                 contFm+=0.2;
             }
-            System.out.println(contAm+" FM");
+            System.out.println(contFm+" FM");
         }
     }
 	public void guardarEstacion(int numeroBoton){
@@ -41,7 +41,15 @@ public class RadioReal implements Radio {
         }
     }
 	public void cargarEstacion(int numeroBoton){
-
+        double estacion = estaciones[numeroBoton];
+        if(estacion%10==0){
+            frecuencia=true;
+            System.out.println(contAm+" AM");
+        }
+        else{
+            frecuencia=false;
+            System.out.println(contFm+" FM");
+        }
     }
 	public void cambiarFM(){
         frecuencia=false;
